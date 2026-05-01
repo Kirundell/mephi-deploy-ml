@@ -11,12 +11,6 @@ Production-like веб-сервис машинного обучения для �
 - Docker-контейнеризация
 - Документация
 
-## Домен
-
-**Кредитный скоринг**
-
-Датасет: [UCI Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
-
 ## Структура проекта
 
 ```
