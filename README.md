@@ -55,8 +55,8 @@ course_task/
 1. **Клонирование и установка зависимостей**
 
 ```bash
-git clone <repository-url>
-cd course_task
+git clone https://github.com/Kirundell/mephi-deploy-ml.git
+cd mephi-deploy-ml
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
