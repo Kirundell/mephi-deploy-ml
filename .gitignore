@@ -45,6 +45,3 @@ Thumbs.db
 # Logs
 *.log
 models/ab_predictions.jsonl
-
-# Модели (можно добавить, если не хотим хранить в git)
-# models/*.pkl

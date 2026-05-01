@@ -5,15 +5,15 @@ Production-like веб-сервис машинного обучения для �
 ## Описание проекта
 
 Сервис реализует полный цикл внедрения ML-модели:
-- Обучение и сохранение двух версий моделей (GradientBoostingClassifier)
+- Обучение и сохранение двух версий моделей (LogReg и GradientBoostingClassifier)
 - FastAPI веб-сервис с REST API
 - A/B-тестирование с роутером 50/50
 - Docker-контейнеризация
-- Comprehensive документация
+- Документация
 
 ## Домен
 
-**Финансы / Кредитный скоринг**
+**Кредитный скоринг**
 
 Датасет: [UCI Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 
@@ -58,8 +58,7 @@ course_task/
 git clone <repository-url>
 cd course_task
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# или venv\Scripts\activate  # Windows
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -252,8 +251,8 @@ pytest tests/test_api.py -v
 ## A/B-тестирование
 
 Сервис поддерживает A/B-тестирование двух версий моделей:
-- **v1**: LogisticRegression — простая, интерпретируемая, высокий Recall
-- **v2**: GradientBoostingClassifier — сложная, точная, выше Precision
+- **v1**: LogisticRegression
+- **v2**: GradientBoostingClassifier
 
 Распределение трафика: 50/50 на основе детерминированного хеша user_id.
 
@@ -275,15 +274,13 @@ pytest tests/test_api.py -v
 
 ## Docker Hub
 
-Образ доступен по адресу: `docker pull <username>/credit-default-api:latest`
+Образ доступен по адресу: `docker pull kirundell/credit-default-api:v1.0`
+
+Ссылка: [https://hub.docker.com/r/kirundell/credit-default-api](https://hub.docker.com/r/kirundell/credit-default-api)
 
 ## Требования
 
 - Python 3.11+
 - scikit-learn 1.8.0+
 - FastAPI 0.136+
-- Docker (опционально)
-
-## Лицензия
-
-Учебный проект для дисциплины «Внедрение моделей машинного обучения».
+- Docker
