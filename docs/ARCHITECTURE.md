@@ -220,13 +220,6 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(model, "model")
 ```
 
-## Безопасность
-
-1. **Валидация входных данных** (Pydantic)
-2. **Rate limiting** (NGINX)
-3. **HTTPS** (SSL termination)
-4. **Аутентификация** (JWT/OAuth2)
-5. **Санитизация логов** (без PII данных)
 
 ## Резюме
 
